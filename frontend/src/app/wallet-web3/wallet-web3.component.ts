@@ -51,6 +51,7 @@ export class WalletWeb3Component {
   metamaskAddress = ''
   ngOnInit (): void {
     this.handleAuth()
+    console.log(`Initiating Web3Wallet...`)
     window.ethereum.on('chainChanged', this.handleChainChanged.bind(this))
   }
 
@@ -109,8 +110,12 @@ export class WalletWeb3Component {
 
   async handleAuth () {
     try {
-      const { isConnected } = getAccount()
-
+      console.log(`Connecting...`)
+      const { isConnected } = {
+        console.log(`Connected!`)
+        getAccount()
+      }
+      
       if (isConnected) {
         await disconnect()
       }
