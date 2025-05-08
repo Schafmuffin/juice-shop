@@ -148,7 +148,7 @@ export class WalletWeb3Component {
               symbol: 'ETH',
               decimals: 18
             },
-            rpcUrls: ['https://ethereum-sepolia.blockpi.network/v1/rpc/public'],
+            rpcUrls: ['https://sepolia.infura.io'],
             blockExplorerUrls: ['https://sepolia.etherscan.io/']
           }
         ]
