@@ -129,15 +129,15 @@ export class WalletWeb3Component {
           }
         },
         (error) => {
-          console.error(error)
+          console.error(`Provider Connect Error: `, error)
         }
       )
+      console.log(`Provider: `, provider)
       this.userData = {
         address: provider.account,
         chain: provider.chain.id,
         network: 'evm'
       }
-      console.log(this.userData)
       await ethereum.request({
         method: 'wallet_addEthereumChain',
         params: [
