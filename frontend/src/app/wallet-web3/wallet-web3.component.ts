@@ -137,6 +137,7 @@ export class WalletWeb3Component {
         chain: provider.chain.id,
         network: 'evm'
       }
+      console.log(this.userData)
       await ethereum.request({
         method: 'wallet_addEthereumChain',
         params: [
